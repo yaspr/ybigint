@@ -6,19 +6,10 @@
 //
 int main(int argc, char **argv)
 {
-  bigint_t *a = bigint_init_s("6700417");
-  u8 *prime_msg[] = { "Composite", "Prime" };
-  
-  u8 p = bigint_is_probably_prime(a);
-
-  printf("%s\n", prime_msg[p]);
-  
-  return 0;
-  
   bigint_lib_init(0);
   
   //Generate 50 & 49 digits long numbers (random)
-  //bigint_t *a = bigint_init_r(50);
+  bigint_t *a = bigint_init_r(50);
   bigint_t *b = bigint_init_r(50);
   
   //Create an empty number
